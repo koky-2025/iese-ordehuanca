@@ -1,0 +1,2318 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+.header {
+  background-color: #004080;
+  color: white;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 5px 20px;
+  font-size: 0.9rem;
+  background-color: #003366;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  width: 60px;
+  margin-right: 15px;
+}
+
+.titulo h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.slogan {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 4px;
+  color: #b3c7ff;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0066cc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  display: block;
+  padding: 12px 10px;
+  font-weight: 500;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.activo {
+  background-color: #004080;
+  border-radius: 4px;
+}
+
+/* Main - Inicio */
+.inicio {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 900px;
+  height: 70vh; /* Esto hará que ocupe el 70% de la altura de la ventana del navegador */
+  margin: 0 auto 30px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sección bienvenida */
+.bienvenida {
+  text-align: center;
+  /* margin-bottom: 40px;  Mantener o ajustar según el espacio deseado con el footer */
+  padding: 60px 20px; /* Aumenta el padding interno, dando más espacio arriba y abajo */
+  background-color: #f0f8ff; /* Un azul muy claro para un fondo sutil */
+  border-radius: 10px; /* Bordes redondeados para un toque moderno */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra suave para darle profundidad */
+  margin-top: 30px; /* Añade un margen superior para separarlo del slider */
+}
+
+.bienvenida h2 {
+  font-size: 2.8rem; /* Aumenta el tamaño de la fuente para más impacto */
+  color: #004080;
+  margin-bottom: 25px; /* Más espacio debajo del título */
+  line-height: 1.2; /* Mejora la legibilidad en varias líneas si el título fuera más largo */
+}
+
+.bienvenida p {
+  font-size: 1.2rem; /* Ligeramente más grande para mejor legibilidad */
+  max-width: 800px; /* Permite que el párrafo se extienda un poco más */
+  margin: 0 auto 35px auto; /* Aumenta el margen inferior para separar de los botones */
+  color: #444; /* Un gris un poco más oscuro para mejor contraste */
+  line-height: 1.8; /* Aumenta el espacio entre líneas para facilitar la lectura */
+}
+
+.btn {
+  background-color: #0066cc; /* Un azul ligeramente más vibrante para el botón principal */
+  color: white;
+  padding: 14px 35px; /* Un poco más de padding para que se vean más grandes y clickables */
+  margin: 0 15px 15px 15px; /* Más margen entre los botones y con el contenido superior */
+  display: inline-block;
+  font-weight: 600;
+  border-radius: 30px; /* Bordes aún más redondeados */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Añade transición a `transform` */
+  text-transform: uppercase; /* Convertir texto a mayúsculas para un look más formal */
+  letter-spacing: 0.5px; /* Espaciado entre letras */
+}
+
+.btn:hover {
+  background-color: #004080; /* Un azul más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Un sutil efecto de "levantar" */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Una sombra más pronunciada al pasar el ratón */
+}
+
+.btn-secundario {
+  background-color: #e6f2ff; /* Un fondo muy claro para el botón secundario */
+  color: #0066cc; /* Color de texto que coincida con el azul del botón principal */
+  border: 1px solid #0066cc; /* Un borde sutil para definirlo */
+}
+
+.btn-secundario:hover {
+  background-color: #d9ecff; /* Fondo ligeramente más oscuro al pasar el ratón */
+  color: #004080; /* Color de texto más oscuro al pasar el ratón */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+/* Footer */
+.footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px 15px;
+}
+
+.footer-links,
+.redes {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* --- Ajustes para el Footer (Pie de Página) --- */
+
+.footer .redes {
+    display: flex;
+    gap: 15px; /* Espacio entre los iconos */
+    justify-content: center; /* Centrar los iconos */
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilos base para cada icono social */
+.footer .redes .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px; /* Tamaño uniforme para el círculo o cuadrado */
+    height: 45px; /* Altura uniforme */
+    /* background-color: #004080; /* Eliminado: ya no queremos un fondo sólido por defecto */
+    border-radius: 50%; /* Hacerlos redondos */
+    
+    /* ¡CAMBIO AQUÍ! Color inicial del icono */
+    color: #cce0ff; /* Un azul claro para que el icono se vea inicialmente */
+    
+    font-size: 1.8rem; /* Aumentado ligeramente el tamaño del icono para que resalte más */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición solo para el color del icono y el transform */
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Eliminado: si el icono es solo texto, no necesita sombra en el fondo */
+}
+
+/* Colores específicos para los iconos al pasar el mouse (hover) */
+.footer .redes .social-icon.facebook:hover {
+    color: #3b5998; /* Facebook azul */
+    transform: translateY(-3px);
+}
+
+.footer .redes .social-icon.youtube:hover {
+    color: #ff0000; /* YouTube rojo */
+    transform: translateY(-3px);
+}
+
+.footer .redes .social-icon.whatsapp:hover {
+    color: #25d366; /* WhatsApp verde */
+    transform: translateY(-3px);
+}
+
+/* Si tienes otros íconos y quieres un color por defecto que no sea el azul claro inicial, puedes añadir más aquí */
+/* Por ejemplo, para un ícono de LinkedIn:
+.footer .redes .social-icon.linkedin {
+    color: #0077B5;
+}
+.footer .redes .social-icon.linkedin:hover {
+    color: #00568B;
+}
+*/
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .titulo h1 {
+    font-size: 1.5rem;
+  }
+
+  .slogan {
+    font-size: 0.9rem;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+  }
+
+  .navbar ul li {
+    margin: 5px 8px;
+  }
+
+  .swiper {
+    height: 250px;
+  }
+
+  .bienvenida h2 {
+    font-size: 1.6rem;
+  }
+
+  .bienvenida p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .footer-links,
+  .redes {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* Que el body y html usen toda la pantalla */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal con ancho 100% sin margen lateral */
+.container, .swiper, .header, .navbar, main, footer {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 auto;
+  padding: 0 20px; /* Puedes ajustar el padding para dar algo de margen interna */
+  box-sizing: border-box;
+}
+
+/* Ajustar carrusel Swiper para que ocupe todo el ancho */
+.swiper {
+  width: 100% !important;
+}
+
+/* Ajustar imágenes del carrusel para que sean responsivas */
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* Carrusel exclusivo para index.html */
+.carrusel {
+  width: 100%;
+  height: 90vh; /* Altura ampliada */
+  overflow: hidden;
+  position: relative;
+}
+
+.carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carrusel img.activo {
+  display: block;
+  opacity: 1;
+  z-index: 2;
+}
+.banner-inicio img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* --- Sección Nosotros --- */
+
+/* Contenedor principal de la página Nosotros */
+.nosotros {
+  max-width: 1000px; /* Limita el ancho del contenido para mejor legibilidad */
+  margin: 30px auto; /* Centra el contenido y añade margen superior/inferior */
+  padding: 0 20px; /* Padding a los lados para evitar que el contenido se pegue a los bordes */
+}
+
+/* Estilo para el bloque de contenido principal en la página Nosotros */
+.nosotros .contenido {
+  background-color: #ffffff; /* Fondo blanco para el contenido */
+  padding: 40px 50px; /* Espaciado interno generoso para el bloque */
+  border-radius: 10px; /* Bordes redondeados para un aspecto moderno */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Sombra suave para darle profundidad */
+  line-height: 1.8; /* Mejora la legibilidad del texto general */
+  color: #333; /* Color de texto más oscuro para mayor contraste */
+}
+
+/* Estilo para el título principal de la sección Nosotros */
+.nosotros .contenido h2 {
+  font-size: 2.5rem; /* Título principal más grande */
+  color: #004080; /* Mismo azul que usas en el encabezado y botones */
+  text-align: center; /* Centra el título principal */
+  margin-bottom: 40px; /* Más espacio debajo del título principal */
+  position: relative; /* Necesario para el pseudoelemento ::after */
+  padding-bottom: 15px; /* Espacio para el subrayado decorativo */
+}
+
+/* Subrayado decorativo para el h2 en la sección Nosotros */
+.nosotros .contenido h2::after {
+  content: '';
+  display: block;
+  width: 80px; /* Ancho del subrayado */
+  height: 4px; /* Grosor del subrayado */
+  background-color: #0066cc; /* Color del subrayado */
+  margin: 10px auto 0 auto; /* Centra el subrayado debajo del texto */
+  border-radius: 2px; /* Bordes suaves para el subrayado */
+}
+
+/* Estilo para los subtítulos (h3) en la sección Nosotros */
+.nosotros .contenido h3 {
+  font-size: 1.8rem; /* Subtítulos más grandes que el texto normal */
+  color: #0066cc; /* Un azul ligeramente diferente para diferenciarlos */
+  margin-top: 35px; /* Espacio superior para separar secciones */
+  margin-bottom: 15px; /* Espacio inferior para separar del párrafo siguiente */
+  border-left: 5px solid #0066cc; /* Línea decorativa a la izquierda */
+  padding-left: 15px; /* Espacio entre la línea y el texto */
+}
+
+/* Estilo para los párrafos en la sección Nosotros */
+.nosotros .contenido p {
+  font-size: 1.1rem;
+  margin-bottom: 20px; /* Espacio entre párrafos */
+  line-height: 1.7; /* Espaciado de línea cómodo */
+}
+
+/* Estilo para la lista de valores en la sección Nosotros */
+.nosotros .contenido ul {
+  list-style: none; /* Quita los puntos predeterminados */
+  padding: 0;
+  margin: 20px 0 30px 0; /* Espacio alrededor de la lista de valores */
+  display: flex; /* Para que los valores se coloquen en fila o envoltura */
+  flex-wrap: wrap; /* Permite que los elementos de la lista se envuelvan en varias líneas */
+  gap: 10px; /* Espacio entre los elementos de la lista */
+  justify-content: center; /* Centra los elementos de la lista */
+}
+
+/* Estilo para cada ítem de la lista de valores */
+.nosotros .contenido ul li {
+  background-color: #e6f2ff; /* Fondo sutil para cada valor */
+  color: #004080; /* Color de texto para los valores */
+  padding: 8px 20px; /* Espaciado interno de cada valor */
+  border-radius: 25px; /* Bordes redondeados para un aspecto de "tag" */
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 1px solid #b3c7ff; /* Borde suave */
+  transition: background-color 0.3s ease;
+}
+
+.nosotros .contenido ul li:hover {
+  background-color: #d9ecff; /* Efecto al pasar el ratón */
+}
+
+/* --- Responsive para la sección Nosotros --- */
+@media (max-width: 768px) {
+  .nosotros .contenido {
+    padding: 30px 20px; /* Reduce el padding en pantallas más pequeñas */
+  }
+
+  .nosotros .contenido h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .nosotros .contenido h3 {
+    font-size: 1.5rem;
+    margin-top: 25px;
+  }
+
+  .nosotros .contenido p {
+    font-size: 1rem;
+  }
+
+  .nosotros .contenido ul {
+    flex-direction: column; /* Apila los valores en columna en móviles */
+    align-items: center; /* Centra los elementos apilados */
+  }
+
+  .nosotros .contenido ul li {
+    width: 80%; /* Ocupa más ancho para móviles */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nosotros .contenido {
+    padding: 20px 15px;
+  }
+
+  .nosotros .contenido h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .nosotros .contenido h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* --- Sección Nosotros - Historia Detallada --- */
+
+.historia-item {
+    margin-bottom: 50px; /* Espacio entre cada sección de historia */
+    padding: 30px;
+    background-color: #f8fcfd; /* Fondo ligeramente diferente para cada bloque de historia */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Sombra más sutil */
+}
+
+.historia-item:last-child {
+    margin-bottom: 0; /* Sin margen inferior en el último elemento */
+}
+
+.historia-item h4 {
+    font-size: 1.5rem; /* Título de cada reseña */
+    color: #004080;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.historia-item h4::after {
+    content: '';
+    display: block;
+    width: 60px; /* Subrayado más corto para h4 */
+    height: 3px;
+    background-color: #0066cc;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+.historia-content {
+    display: flex;
+    flex-direction: column; /* Por defecto, apila el texto y las imágenes */
+    gap: 25px; /* Espacio entre los párrafos y los contenedores de imagen */
+}
+
+.historia-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0; /* Reinicia el margen inferior para controlarlo dentro de `gap` */
+    color: #444;
+    text-align: justify; /* Justifica el texto para una apariencia más formal */
+}
+
+.historia-content ul {
+    list-style: disc; /* Vuelve a los puntos para las listas de características */
+    padding-left: 25px; /* Indentación para las listas */
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+.historia-content ul li {
+    background-color: transparent; /* Anula el estilo de "tag" de la lista de valores */
+    color: #444;
+    padding: 0;
+    border-radius: 0;
+    font-weight: normal;
+    font-size: 1rem;
+    border: none;
+    margin-bottom: 5px; /* Espacio entre ítems de la lista */
+}
+
+.historia-image-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan */
+    justify-content: center; /* Centra las imágenes */
+    gap: 15px; /* Espacio entre las imágenes si hay varias */
+    margin-top: 20px;
+}
+
+.historia-image-container img {
+    max-width: 100%; /* Las imágenes no excederán su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 300px; /* Altura máxima para evitar imágenes demasiado grandes */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio manteniendo proporciones */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Para la imagen centrada de la I.E. */
+.center-image img {
+    max-width: 70%; /* Ocupa un poco menos de ancho si está centrada */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Invertir el orden de texto e imagen en algunas secciones (Opcional) */
+/* Por ejemplo, puedes querer que la imagen esté a la izquierda en una sección y a la derecha en otra */
+/* .historia-poblado .historia-content {
+    flex-direction: column-reverse;
+} */
+
+
+/* --- Responsive para la Sección Nosotros - Historia Detallada --- */
+@media (max-width: 768px) {
+    .historia-item {
+        padding: 20px;
+    }
+
+    .historia-item h4 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .historia-content p,
+    .historia-content ul li {
+        font-size: 0.95rem;
+    }
+
+    .historia-image-container img {
+        max-height: 200px; /* Reduce la altura máxima de las imágenes en móviles */
+    }
+
+    .center-image img {
+        max-width: 90%; /* Ocupa más ancho en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .historia-item {
+        padding: 15px;
+    }
+
+    .historia-item h4 {
+        font-size: 1.2rem;
+    }
+
+    .historia-image-container {
+        flex-direction: column; /* Apila las imágenes verticalmente en pantallas muy pequeñas */
+        align-items: center; /* Centra las imágenes apiladas */
+    }
+}
+/* --- Navbar Responsivo --- */
+
+/* Esconder el botón de menú por defecto en pantallas grandes */
+.menu-toggle {
+  display: none; /* Debe ser 'none' por defecto */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+.hamburger {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: all 0.3s ease;
+}
+
+/* Efecto de animación de la hamburguesa (cuando el menú está abierto) */
+.menu-toggle.is-active .hamburger:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.is-active .hamburger:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-active .hamburger:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Estilos del menú (navbar-menu) */
+.navbar ul.navbar-menu { /* MUY IMPORTANTE: selectores correctos y específicos */
+  display: flex; /* Esto es para pantallas grandes, en móvil se anulará */
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ajustes para pantallas pequeñas (Media Query) */
+@media (max-width: 768px) {
+    /* ... (asegúrate de que los estilos del header y top-bar están como te los di en la última respuesta) ... */
+
+    .menu-toggle {
+        display: block; /* ESTO ES FUNDAMENTAL para que se vea en móvil */
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
+    }
+
+    .navbar {
+        position: relative; /* Necesario para el posicionamiento absoluto del menú */
+    }
+
+    .navbar ul.navbar-menu {
+        flex-direction: column;
+        background-color: #004080;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: 0; /* Menú oculto por defecto */
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+
+    .navbar ul.navbar-menu.is-open {
+        max-height: 500px; /* Menú visible al abrir. Puedes aumentar si tienes muchos ítems. */
+    }
+
+
+  .navbar ul li {
+    margin: 0; /* Elimina márgenes laterales */
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* Separador entre ítems */
+  }
+
+  .navbar ul li:last-child {
+    border-bottom: none; /* No hay separador en el último ítem */
+  }
+
+  .navbar ul li a {
+    padding: 15px 20px; /* Más padding para facilitar el toque */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+
+  .navbar ul li a:hover,
+  .navbar ul li a.activo {
+    background-color: #003366; /* Color de fondo al pasar el ratón o activo */
+    border-radius: 0; /* Elimina el borde redondeado en móvil */
+  }
+}
+
+/* Nuevas reglas para el header y top-bar para que se adapten mejor al nuevo layout móvil */
+@media (max-width: 768px) {
+    .header .top-bar {
+        justify-content: center; /* Centra la información de contacto */
+        gap: 10px;
+        font-size: 0.8rem;
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben */
+    }
+}
+
+/* --- Estilos para la sección de Áreas Académicas --- */
+
+/* Contenedor principal de la sección */
+.areas .contenido {
+    padding: 40px 20px;
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 20px auto; /* Centrar el contenido y darle margen arriba/abajo */
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.areas h2 {
+    text-align: center;
+    color: #004080; /* Azul institucional */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative; /* Para la línea decorativa */
+    padding-bottom: 15px;
+}
+
+.areas h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #FF6600; /* Naranja/Énfasis */
+    border-radius: 2px;
+}
+
+/* Contenedor de las tarjetas de área */
+.areas .contenido {
+    display: grid; /* Usamos CSS Grid para el layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 30px; /* Espacio entre las tarjetas */
+}
+
+/* Estilo para cada tarjeta de área */
+.area {
+    background-color: #f8f8f8; /* Fondo suave para la tarjeta */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Para que el h3 y p estén en columna */
+    flex-direction: column;
+    justify-content: flex-start; /* Alinear el contenido arriba */
+    align-items: flex-start; /* Alinear texto a la izquierda */
+}
+
+.area:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el mouse */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.area h3 {
+    color: #004080; /* Azul institucional para el título del área */
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #FF6600; /* Línea decorativa bajo el título del área */
+    padding-bottom: 5px;
+}
+
+.area p {
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Media Queries para responsividad --- */
+
+@media (max-width: 992px) {
+    .areas .contenido {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste de columnas en tablets */
+        gap: 25px;
+    }
+    .areas h2 {
+        font-size: 2.2rem;
+    }
+    .area h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .areas .contenido {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 20px;
+        padding: 30px 15px;
+    }
+    .areas h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .area {
+        padding: 20px;
+    }
+    .area h3 {
+        font-size: 1.4rem;
+    }
+    .area p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .areas .contenido {
+        padding: 20px 10px;
+        margin: 10px auto;
+    }
+    .areas h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    .area h3 {
+        font-size: 1.3rem;
+    }
+    .area p {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Estilos para la sección de Docentes --- */
+
+/* Contenedor principal de la sección */
+.docentes .contenido {
+    padding: 40px 20px;
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 20px auto; /* Centrar el contenido y darle margen arriba/abajo */
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center; /* Centrar el título h2 */
+}
+
+.docentes h2 {
+    color: #004080; /* Azul institucional */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative; /* Para la línea decorativa */
+    padding-bottom: 15px;
+}
+
+.docentes h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #FF6600; /* Naranja/Énfasis */
+    border-radius: 2px;
+}
+
+/* Contenedor de la galería de docentes (la cuadrícula) */
+.galeria-docentes {
+    display: grid; /* Usamos CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Columnas responsivas para tarjetas de docentes */
+    gap: 30px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centrar las tarjetas si no llenan el ancho completo */
+    align-items: stretch; /* Asegura que las tarjetas tengan la misma altura si el contenido lo permite */
+}
+
+/* Estilo para cada tarjeta de docente */
+.docente-card { /* <--- Nota: He usado 'docente-card' en el HTML. Si usas 'docente', asegúrate de que el CSS coincida. */
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Centrar contenido dentro de la tarjeta */
+    display: flex; /* Para organizar elementos verticalmente */
+    flex-direction: column;
+    align-items: center; /* Centrar elementos horizontalmente */
+}
+
+.docente-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.docente-card img {
+    width: 120px; /* Tamaño de la imagen del docente */
+    height: 120px;
+    border-radius: 50%; /* Hacerla circular */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border: 3px solid #004080; /* Borde alrededor de la imagen */
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.docente-card h3 {
+    color: #004080;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.docente-card p {
+    color: #666666;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* --- Media Queries para responsividad --- */
+
+@media (max-width: 992px) {
+    .galeria-docentes {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste de columnas en tablets */
+        gap: 25px;
+    }
+    .docentes h2 {
+        font-size: 2.2rem;
+    }
+    .docente-card img {
+        width: 100px;
+        height: 100px;
+    }
+    .docente-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria-docentes {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 2 columnas en móviles medianos */
+        gap: 20px;
+    }
+    .docentes .contenido {
+        padding: 30px 15px;
+    }
+    .docentes h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .docente-card img {
+        width: 90px;
+        height: 90px;
+    }
+    .docente-card h3 {
+        font-size: 1.2rem;
+    }
+    .docente-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-docentes {
+        grid-template-columns: 1fr; /* Una columna en móviles pequeños */
+        gap: 15px;
+    }
+    .docentes .contenido {
+        padding: 20px 10px;
+        margin: 10px auto;
+    }
+    .docentes h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    .docente-card img {
+        width: 80px;
+        height: 80px;
+    }
+    .docente-card h3 {
+        font-size: 1.1rem;
+    }
+    .docente-card p {
+        font-size: 0.85rem;
+    }
+}
+
+/* --- Estilos para la sección de Noticias y Eventos --- */
+
+/* Contenedor principal de la sección */
+.noticias .contenido {
+    padding: 40px 20px;
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 20px auto; /* Centrar el contenido y darle margen arriba/abajo */
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center; /* Centrar el título h2 */
+}
+
+.noticias h2 {
+    color: #004080; /* Azul institucional */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative; /* Para la línea decorativa */
+    padding-bottom: 15px;
+}
+
+.noticias h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #FF6600; /* Naranja/Énfasis */
+    border-radius: 2px;
+}
+
+/* Contenedor de la lista de eventos/noticias (la cuadrícula) */
+.lista-eventos {
+    display: grid; /* Usamos CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsivas para tarjetas */
+    gap: 30px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centrar las tarjetas si no llenan el ancho completo */
+    align-items: stretch; /* Asegura que las tarjetas tengan la misma altura */
+}
+
+/* Estilo para cada tarjeta de evento/noticia */
+.evento-card {
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Alinear el texto a la izquierda dentro de la tarjeta */
+    position: relative; /* Para posicionar la fecha */
+    overflow: hidden; /* Asegura que el contenido no desborde si hay imágenes */
+    display: flex;
+    flex-direction: column;
+}
+
+.evento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la fecha destacada */
+.fecha-publicacion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FF6600; /* Color de énfasis */
+    color: white;
+    padding: 8px 12px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px; /* Esquina redondeada abajo a la derecha */
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    z-index: 10; /* Asegura que esté por encima del contenido */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.fecha-publicacion span {
+    font-size: 0.8rem; /* Para el mes */
+    display: block;
+    margin-top: 2px;
+}
+
+
+.evento-card h3 {
+    color: #004080;
+    font-size: 1.6rem;
+    margin-top: 30px; /* Espacio para la fecha superpuesta */
+    margin-bottom: 15px;
+    padding-top: 10px; /* Asegura que el título no quede debajo de la fecha */
+}
+
+.evento-card p {
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.6;
+    flex-grow: 1; /* Permite que el párrafo ocupe el espacio restante */
+    margin-bottom: 20px;
+}
+
+.btn-leer-mas {
+    display: inline-block;
+    background-color: #004080; /* Azul institucional */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Empuja el botón hacia abajo si las tarjetas tienen diferentes alturas */
+    align-self: flex-start; /* Alinea el botón a la izquierda */
+}
+
+.btn-leer-mas:hover {
+    background-color: #002d5e; /* Azul más oscuro al pasar el mouse */
+}
+
+/* --- Media Queries para responsividad --- */
+
+@media (max-width: 992px) {
+    .lista-eventos {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    .noticias h2 {
+        font-size: 2.2rem;
+    }
+    .evento-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .lista-eventos {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 20px;
+    }
+    .noticias .contenido {
+        padding: 30px 15px;
+    }
+    .noticias h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .evento-card {
+        padding: 20px;
+    }
+    .evento-card h3 {
+        font-size: 1.4rem;
+        margin-top: 25px;
+    }
+    .evento-card p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .noticias .contenido {
+        padding: 20px 10px;
+        margin: 10px auto;
+    }
+    .noticias h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    .evento-card h3 {
+        font-size: 1.3rem;
+        margin-top: 20px;
+    }
+    .evento-card p {
+        font-size: 0.9rem;
+    }
+    .fecha-publicacion {
+        padding: 6px 10px;
+        font-size: 1rem;
+    }
+    .fecha-publicacion span {
+        font-size: 0.7rem;
+    }
+}
+
+/* --- Estilos para la sección de Galería --- */
+
+/* Contenedor principal de la sección */
+.galeria .contenido {
+    padding: 40px 20px;
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 20px auto; /* Centrar el contenido y darle margen arriba/abajo */
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center; /* Centrar el título h2 */
+}
+
+.galeria h2 {
+    color: #004080; /* Azul institucional */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative; /* Para la línea decorativa */
+    padding-bottom: 15px;
+}
+
+.galeria h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #FF6600; /* Naranja/Énfasis */
+    border-radius: 2px;
+}
+
+/* Contenedor de la cuadrícula de la galería */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 25px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centrar los ítems si no llenan el ancho */
+}
+
+/* Estilo para cada ítem de la galería */
+.galeria-item {
+    position: relative;
+    overflow: hidden; /* Oculta el contenido que se desborda, esencial para el hover */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento */
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Recorta la imagen para que cubra el área */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.05); /* Ligeramente agranda la imagen al pasar el mouse */
+}
+
+/* Overlay (superposición) con el título de la imagen */
+.galeria-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 64, 128, 0.7); /* Fondo azul semi-transparente */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.galeria-item:hover .overlay {
+    opacity: 1; /* Visible al pasar el mouse */
+}
+
+.galeria-item .caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    padding: 10px;
+    text-align: center;
+}
+
+/* --- Media Queries para responsividad --- */
+
+@media (max-width: 992px) {
+    .galeria-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .galeria h2 {
+        font-size: 2.2rem;
+    }
+    .galeria-item img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 2 columnas en móviles medianos */
+        gap: 15px;
+    }
+    .galeria .contenido {
+        padding: 30px 15px;
+    }
+    .galeria h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .galeria-item img {
+        height: 160px;
+    }
+    .galeria-item .caption {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles pequeños */
+        gap: 10px;
+    }
+    .galeria .contenido {
+        padding: 20px 10px;
+        margin: 10px auto;
+    }
+    .galeria h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    .galeria-item img {
+        height: 180px; /* Aumentamos la altura en una columna para que se vean mejor */
+    }
+}
+
+/* --- Estilos para la sección de Contacto --- */
+
+/* Contenedor principal de la sección */
+.contacto .contenido {
+    padding: 40px 20px;
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 20px auto; /* Centrar el contenido y darle margen arriba/abajo */
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center; /* Centrar el título h2 */
+}
+
+.contacto h2 {
+    color: #004080; /* Azul institucional */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative; /* Para la línea decorativa */
+    padding-bottom: 15px;
+}
+
+.contacto h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #FF6600; /* Naranja/Énfasis */
+    border-radius: 2px;
+}
+
+/* Contenedor de la información y el formulario (cuadrícula) */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Información a la izquierda (1 parte), Formulario a la derecha (2 partes) */
+    gap: 50px; /* Espacio entre las columnas */
+    align-items: flex-start; /* Alinea los ítems al inicio de su contenedor */
+    margin-bottom: 50px;
+    text-align: left; /* Restablecer la alineación de texto a la izquierda para el contenido */
+}
+
+.contacto-grid h3 {
+    color: #004080;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* Estilos para la información de contacto */
+.info-contacto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.info-contacto p i { /* Para futuros íconos si usas Font Awesome */
+    margin-right: 10px;
+    color: #FF6600;
+}
+
+.info-contacto p a {
+    color: #004080;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-contacto p a:hover {
+    color: #FF6600;
+}
+
+.redes-contacto {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.redes-contacto img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.redes-contacto img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para el formulario de contacto */
+.formulario-contacto .form-group {
+    margin-bottom: 20px;
+}
+
+.formulario-contacto label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto textarea {
+    width: calc(100% - 20px); /* Ocupa casi todo el ancho disponible */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario-contacto input[type="text"]:focus,
+.formulario-contacto input[type="email"]:focus,
+.formulario-contacto textarea:focus {
+    border-color: #004080;
+    box-shadow: 0 0 8px rgba(0, 64, 128, 0.2);
+    outline: none;
+}
+
+.formulario-contacto textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 120px;
+}
+
+.btn-enviar {
+    display: block; /* Ocupa todo el ancho disponible */
+    width: 100%;
+    padding: 15px 25px;
+    background-color: #004080; /* Azul institucional */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #002d5e; /* Azul más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+/* Estilos para el mapa de ubicación */
+.mapa-ubicacion {
+    margin-top: 40px;
+    text-align: center; /* Centrar el título del mapa */
+}
+
+.mapa-ubicacion h3 {
+    color: #004080;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    display: inline-block; /* Para que la línea se ajuste al texto */
+}
+
+.mapa-ubicacion iframe {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 900px; /* Ancho máximo para el mapa */
+    height: 450px; /* Altura fija para el mapa */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Media Queries para responsividad --- */
+
+@media (max-width: 992px) {
+    .contacto-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas medianas */
+        gap: 40px;
+    }
+    .contacto .contenido {
+        padding: 30px 15px;
+    }
+    .contacto h2 {
+        font-size: 2.2rem;
+    }
+    .contacto-grid h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto .contenido {
+        padding: 25px 10px;
+    }
+    .contacto h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .contacto-grid h3 {
+        font-size: 1.5rem;
+    }
+    .info-contacto p {
+        font-size: 1rem;
+    }
+    .redes-contacto img {
+        width: 35px;
+        height: 35px;
+    }
+    .formulario-contacto input,
+    .formulario-contacto textarea,
+    .btn-enviar {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    .mapa-ubicacion h3 {
+        font-size: 1.6rem;
+    }
+    .mapa-ubicacion iframe {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacto .contenido {
+        padding: 20px 5px;
+        margin: 10px auto;
+    }
+    .contacto h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    .contacto-grid h3 {
+        font-size: 1.4rem;
+    }
+    .info-contacto p {
+        font-size: 0.95rem;
+    }
+    .redes-contacto {
+        justify-content: center; /* Centrar iconos en móviles */
+    }
+    .formulario-contacto label {
+        font-size: 0.95rem;
+    }
+    .formulario-contacto input,
+    .formulario-contacto textarea,
+    .btn-enviar {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+    .mapa-ubicacion h3 {
+        font-size: 1.4rem;
+    }
+    .mapa-ubicacion iframe {
+        height: 300px;
+    }
+}
+
+/* --- Estilos para la sección de Aula Virtual --- */
+
+/* Contenedor principal de la sección */
+.aula-virtual .contenido {
+    padding: 40px 20px;
+    max-width: 1000px; /* Ancho máximo para el contenido */
+    margin: 20px auto; /* Centrar el contenido y darle margen arriba/abajo */
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center; /* Centrar el título h2 */
+}
+
+.aula-virtual h2 {
+    color: #004080; /* Azul institucional */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative; /* Para la línea decorativa */
+    padding-bottom: 15px;
+}
+
+.aula-virtual h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #FF6600; /* Naranja/Énfasis */
+    border-radius: 2px;
+}
+
+.aula-virtual .intro-texto {
+    font-size: 1.15rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenedor de las tarjetas de recursos */
+.recursos-aula {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 columnas en desktop, 1 en móvil */
+    gap: 30px;
+    margin-bottom: 50px;
+    text-align: left; /* Restablecer alineación de texto dentro de las tarjetas */
+}
+
+.card-recursos {
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-recursos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-recursos h3 {
+    color: #004080;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.card-recursos h3 .fas { /* Estilo para los iconos en los títulos */
+    margin-right: 12px;
+    color: #FF6600;
+    font-size: 1.5rem;
+}
+
+
+.lista-recursos {
+    list-style: none; /* Eliminar viñetas por defecto */
+    padding: 0;
+    margin: 0;
+}
+
+.recurso-item {
+    margin-bottom: 15px;
+}
+
+.recurso-item a {
+    display: flex; /* Para alinear el icono y el texto */
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #eaf3ff; /* Azul claro para el fondo del enlace */
+    border-radius: 5px;
+    text-decoration: none;
+    color: #004080; /* Color del texto del enlace */
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid #cce0ff;
+}
+
+.recurso-item a:hover {
+    background-color: #d8e5ff; /* Azul un poco más oscuro al pasar el mouse */
+    transform: translateX(5px); /* Pequeño desplazamiento a la derecha */
+}
+
+.recurso-item a .fas { /* Estilo para los iconos de los elementos de la lista */
+    margin-right: 12px;
+    color: #FF6600; /* Naranja para los iconos */
+}
+
+/* Estilos para la sección de soporte */
+.soporte {
+    background-color: #f0f7ff; /* Fondo azul muy claro */
+    border: 1px solid #cce0ff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.soporte h3 {
+    color: #004080;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.soporte h3 .fas {
+    margin-right: 15px;
+    color: #FF6600;
+    font-size: 1.8rem;
+}
+
+.soporte p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.soporte p a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.soporte p a:hover {
+    color: #FF6600;
+    text-decoration: underline;
+}
+
+.btn-soporte {
+    display: inline-block;
+    background-color: #004080;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-soporte:hover {
+    background-color: #002d5e;
+    transform: translateY(-2px);
+}
+
+/* --- Media Queries para responsividad --- */
+
+@media (max-width: 992px) {
+    .aula-virtual .contenido {
+        padding: 30px 15px;
+    }
+    .aula-virtual h2 {
+        font-size: 2.2rem;
+    }
+    .recursos-aula {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas medianas */
+        gap: 25px;
+    }
+    .card-recursos {
+        padding: 25px;
+    }
+    .card-recursos h3 {
+        font-size: 1.6rem;
+    }
+    .recurso-item a {
+        font-size: 1rem;
+        padding: 10px 12px;
+    }
+    .soporte h3 {
+        font-size: 1.8rem;
+    }
+    .soporte p {
+        font-size: 1rem;
+    }
+    .btn-soporte {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aula-virtual .contenido {
+        padding: 25px 10px;
+    }
+    .aula-virtual h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    .intro-texto {
+        font-size: 1.05rem;
+        margin-bottom: 30px;
+    }
+    .card-recursos h3 {
+        font-size: 1.5rem;
+    }
+    .recurso-item a {
+        font-size: 0.95rem;
+    }
+    .soporte h3 {
+        font-size: 1.6rem;
+    }
+    .soporte p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .aula-virtual .contenido {
+        padding: 20px 5px;
+        margin: 10px auto;
+    }
+    .aula-virtual h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    .intro-texto {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+    .card-recursos {
+        padding: 20px;
+    }
+    .card-recursos h3 {
+        font-size: 1.4rem;
+    }
+    .card-recursos h3 .fas {
+        font-size: 1.3rem;
+    }
+    .recurso-item a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+    .recurso-item a .fas {
+        font-size: 0.9rem;
+        margin-right: 8px;
+    }
+    .soporte h3 {
+        font-size: 1.5rem;
+    }
+    .soporte h3 .fas {
+        font-size: 1.4rem;
+        margin-right: 10px;
+    }
+    .soporte p {
+        font-size: 0.9rem;
+    }
+    .btn-soporte {
+        font-size: 0.95rem;
+        padding: 10px 18px;
+    }
+}
+
+/* --- Nuevos Estilos para la Página de Inicio (index.html) --- */
+
+/* Estilos generales para las secciones nuevas */
+.enfoque-educativo,
+.ultimos-eventos,
+.video-institucional,
+.llamada-accion {
+    max-width: 1200px;
+    margin: 60px auto; /* Margen superior e inferior para separar secciones */
+    padding: 0 20px;
+    text-align: center;
+}
+
+.enfoque-educativo h2,
+.ultimos-eventos h2,
+.video-institucional h2,
+.llamada-accion h2 {
+    color: #004080; /* Azul institucional */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.enfoque-educativo h2::after,
+.ultimos-eventos h2::after,
+.video-institucional h2::after,
+.llamada-accion h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #FF6600; /* Naranja/Énfasis */
+    border-radius: 2px;
+}
+
+.intro-texto {
+    font-size: 1.15rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* --- Sección: Nuestro Enfoque Educativo --- */
+.enfoque-educativo {
+    background-color: #f0f8ff; /* Fondo azul muy claro */
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.enfoque-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.enfoque-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.enfoque-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.enfoque-card i {
+    font-size: 3.5rem; /* Tamaño de los iconos */
+    color: #FF6600; /* Color de los iconos */
+    margin-bottom: 20px;
+    display: block; /* Asegura que el icono esté en su propia línea */
+}
+
+.enfoque-card h3 {
+    font-size: 1.6rem;
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.enfoque-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- Sección: Últimos Eventos y Logros --- */
+.ultimos-eventos {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.evento-item {
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* Para que la imagen no desborde */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Contenido del texto alineado a la izquierda */
+}
+
+.evento-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.evento-item img {
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Recorta la imagen para que cubra el espacio */
+    display: block;
+}
+
+.evento-info {
+    padding: 20px;
+}
+
+.evento-info h3 {
+    font-size: 1.5rem;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.evento-info p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.fecha-evento {
+    font-size: 0.9rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fecha-evento .far {
+    color: #FF6600; /* Color del icono de calendario */
+}
+
+/* --- Sección: Recorrido Virtual / Video Institucional --- */
+.video-institucional {
+    background-color: #eaf3ff; /* Fondo azul claro */
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 para videos responsivos */
+    height: 0;
+    overflow: hidden;
+    max-width: 900px; /* Ancho máximo del video */
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- Sección: Llamada a la Acción --- */
+.llamada-accion {
+    background-color: #004080; /* Azul institucional */
+    color: white;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.llamada-accion h2 {
+    color: white; /* Título blanco */
+    margin-bottom: 20px;
+}
+
+.llamada-accion h2::after {
+    background-color: #FF6600; /* Subrayado naranja */
+}
+
+.llamada-accion p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.llamada-accion .btn {
+    background-color: #FF6600; /* Botón naranja */
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.llamada-accion .btn:hover {
+    background-color: #e65c00; /* Naranja más oscuro al hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+
+
+/* --- Media Queries para responsividad de nuevas secciones --- */
+
+@media (max-width: 992px) {
+    .enfoque-educativo h2,
+    .ultimos-eventos h2,
+    .video-institucional h2,
+    .llamada-accion h2 {
+        font-size: 2.2rem;
+    }
+    .enfoque-cards {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+    }
+    .enfoque-card i {
+        font-size: 3rem;
+    }
+    .enfoque-card h3 {
+        font-size: 1.5rem;
+    }
+    .eventos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    .evento-item img {
+        height: 180px;
+    }
+    .llamada-accion p {
+        font-size: 1.1rem;
+    }
+    .llamada-accion .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .enfoque-educativo,
+    .ultimos-eventos,
+    .video-institucional,
+    .llamada-accion {
+        margin: 40px auto;
+        padding: 40px 15px;
+    }
+    .enfoque-educativo h2,
+    .ultimos-eventos h2,
+    .video-institucional h2,
+    .llamada-accion h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    .enfoque-cards {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 20px;
+    }
+    .enfoque-card {
+        padding: 25px;
+    }
+    .enfoque-card i {
+        font-size: 3rem;
+    }
+    .eventos-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 20px;
+    }
+    .evento-item {
+        padding: 0; /* padding se maneja dentro de evento-info */
+    }
+    .evento-info {
+        padding: 20px;
+    }
+    .evento-item img {
+        height: 220px; /* Un poco más alto en móviles para destacar la imagen */
+    }
+    .video-container {
+        margin: 30px auto;
+    }
+    .llamada-accion p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .enfoque-educativo,
+    .ultimos-eventos,
+    .video-institucional,
+    .llamada-accion {
+        margin: 30px auto;
+        padding: 30px 10px;
+    }
+    .enfoque-educativo h2,
+    .ultimos-eventos h2,
+    .video-institucional h2,
+    .llamada-accion h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    .enfoque-card i {
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+    }
+    .enfoque-card h3 {
+        font-size: 1.4rem;
+    }
+    .enfoque-card p,
+    .evento-info p {
+        font-size: 0.9rem;
+    }
+    .evento-info h3 {
+        font-size: 1.3rem;
+    }
+    .fecha-evento {
+        font-size: 0.85rem;
+    }
+    .llamada-accion p {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+    .llamada-accion .btn {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* --- Selector de Idioma --- */
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre Español, |, Quechua */
+    margin-left: auto; /* Empuja el selector a la derecha en el top-bar */
+    padding-left: 20px; /* Para que no se pegue al texto de contacto */
+}
+
+.language-switcher .lang-link {
+    color: #b3c7ff; /* Un azul claro para los enlaces de idioma */
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.language-switcher .lang-link:hover {
+    color: white; /* Blanco brillante al pasar el cursor */
+    text-decoration: underline;
+}
+
+.language-switcher .lang-link.activo-lang {
+    color: white; /* El idioma activo es blanco */
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.language-switcher .lang-separator {
+    color: #b3c7ff; /* Color del separador | */
+}
+
+/* Ajustes responsivos para el selector de idioma */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column; /* Apila los elementos en columnas */
+        align-items: center; /* Centra los elementos */
+        gap: 5px;
+    }
+    .language-switcher {
+        margin-left: 0; /* Quita el margen automático para que se centre */
+        padding-left: 0;
+        margin-top: 5px;
+    }
+}

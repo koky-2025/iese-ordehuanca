@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Virtual - IES JEC "Señor de Huanca"</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <span>📞 999-888-777</span>
+            <span>✉️ contacto@ieshuanca.edu.pe</span>
+        </div>
+        <div class="logo-container">
+            <img src="imagenes/logo.png" alt="Logo Institución" class="logo">
+            <div class="titulo">
+                <h1>IES JEC "Señor de Huanca"</h1>
+                <p class="slogan">Formando estudiantes con valores</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <button class="menu-toggle" aria-label="Abrir menú de navegación">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="areas.html">Áreas Académicas</a></li>
+            <li><a href="docentes.html">Docentes</a></li>
+            <li><a href="noticias.html">Noticias y Eventos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="aula.html" class="activo">Aula Virtual</a></li>
+        </ul>
+    </nav>
+
+    <main class="aula-virtual">
+        <section class="contenido">
+            <h2>Aula Virtual</h2>
+            <p class="intro-texto">Accede a los recursos y plataformas educativas desde aquí. Esta sección está diseñada para brindar apoyo académico a estudiantes y docentes de nuestra institución.</p>
+
+            <div class="recursos-aula">
+                <div class="card-recursos">
+                    <h3><i class="fas fa-desktop"></i> Plataformas disponibles:</h3>
+                    <ul class="lista-recursos">
+                        <li class="recurso-item"><a href="https://classroom.google.com" target="_blank"><i class="fas fa-chalkboard-teacher"></i> Google Classroom</a></li>
+                        <li class="recurso-item"><a href="#"><i class="fas fa-laptop-code"></i> Moodle (próximamente)</a></li>
+                        </ul>
+                </div>
+
+                <div class="card-recursos">
+                    <h3><i class="fas fa-download"></i> Recursos descargables:</h3>
+                    <ul class="lista-recursos">
+                        <li class="recurso-item"><a href="materiales/horario_general.pdf" download><i class="fas fa-file-pdf"></i> Horario General</a></li>
+                        <li class="recurso-item"><a href="materiales/manual_estudiante.pdf" download><i class="fas fa-book"></i> Manual del Estudiante</a></li>
+                        <li class="recurso-item"><a href="materiales/calendario_academico.pdf" download><i class="fas fa-calendar-alt"></i> Calendario Académico</a></li>
+                        </ul>
+                </div>
+            </div>
+
+            <div class="soporte">
+                <h3><i class="fas fa-headset"></i> ¿Necesitas ayuda?</h3>
+                <p>Si tienes dificultades para acceder al aula virtual o necesitas asistencia, contáctanos al correo <a href="mailto:soporte@ieshuanca.edu.pe">soporte@ieshuanca.edu.pe</a></p>
+                <a href="contacto.html" class="btn-soporte">Ir a Contacto</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 IES JEC "Señor de Huanca". Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="aula.html">Aula Virtual</a>
+        </div>
+        <div class="redes">
+            <a href="https://www.facebook.com/p/I-E-Se%C3%B1or-De-Huanca-100064781058121/?locale=es_ES&_rdr" target="_blank" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/channel/UC_TuCanalDeYoutube" target="_blank" class="social-icon youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/51999888777?text=Hola%20quiero%20informacion%20del%20IES" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        if (menuToggle && navbarMenu) {
+            menuToggle.addEventListener('click', () => {
+                navbarMenu.classList.toggle('is-open');
+                menuToggle.classList.toggle('is-active');
+                if (navbarMenu.classList.contains('is-open')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!navbarMenu.contains(event.target) && !menuToggle.contains(event.target) && navbarMenu.classList.contains('is-open')) {
+                    navbarMenu.classList.remove('is-open');
+                    menuToggle.classList.remove('is-active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            navbarMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        navbarMenu.classList.remove('is-open');
+                        menuToggle.classList.remove('is-active');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+        } else {
+            console.warn("Error: No se encontraron los elementos '.menu-toggle' o '.navbar-menu'. El menú hamburguesa podría no funcionar.");
+        }
+    </script>
+</body>
+</html>
